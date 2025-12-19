@@ -1,0 +1,35 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="90" y1="30" x2="420" y2="482" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1d6cf2"/>
+      <stop offset="1" stop-color="#0f47c4"/>
+    </linearGradient>
+    <radialGradient id="highlight" cx="0.5" cy="0.25" r="0.7">
+      <stop offset="0" stop-color="#7fc5ff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7fc5ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect x="32" y="32" width="448" height="448" rx="120" fill="url(#bg)"/>
+  <rect x="32" y="32" width="448" height="448" rx="120" fill="url(#highlight)"/>
+  <rect x="32" y="32" width="448" height="448" rx="120" stroke="#8ec2ff" stroke-opacity="0.18" stroke-width="4"/>
+
+  <!-- Subtle inner shell -->
+  <rect x="118" y="118" width="276" height="276" rx="60" fill="rgba(255,255,255,0.06)" stroke="#9acbff" stroke-opacity="0.16" stroke-width="10"/>
+
+  <!-- FI Monogram -->
+  <text x="256" y="256" text-anchor="middle" dominant-baseline="middle"
+        font-family="Nunito, 'SF Pro Display', 'Inter', Arial, sans-serif"
+        font-size="180" font-weight="800" fill="#ffffff" letter-spacing="2">
+    FI
+  </text>
+
+  <!-- Pixel sparks -->
+  <g fill="#d7e9ff">
+    <rect x="348" y="136" width="12" height="12" rx="2"/>
+    <rect x="368" y="136" width="12" height="12" rx="2" opacity="0.9"/>
+    <rect x="368" y="156" width="12" height="12" rx="2" opacity="0.75"/>
+    <rect x="388" y="156" width="10" height="10" rx="2" opacity="0.6"/>
+  </g>
+</svg>

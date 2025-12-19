@@ -1,0 +1,55 @@
+name: Desktop Build
+
+on:
+  pull_request:
+    paths:
+      - "flaco-macos/**"
+      - ".github/workflows/desktop-build.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "flaco-macos/**"
+      - ".github/workflows/desktop-build.yml"
+
+jobs:
+  build:
+    runs-on: macos-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: flaco-macos
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: flaco-macos/package-lock.json
+
+      - name: Install deps
+        run: npm install --no-fund --no-audit
+
+      - name: Build desktop app
+        run: npm run build:quiet
+
+      - name: Organize artifacts
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "PKG_VERSION=${VERSION}" >> "$GITHUB_ENV"
+          mkdir -p "distro/${VERSION}"
+          shopt -s nullglob
+          for f in distro/Flaco-AI-* distro/latest-mac.yml distro/mac-*; do
+            [ -e "$f" ] && mv "$f" "distro/${VERSION}/"
+          done
+          ls -al "distro/${VERSION}"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: flaco-macos-${{ env.PKG_VERSION }}
+          path: flaco-macos/distro/**

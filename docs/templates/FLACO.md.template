@@ -1,0 +1,213 @@
+---
+project: Your Project Name
+version: 1.0.0
+language: Python/TypeScript/etc
+framework: Your Framework
+---
+
+# Project Context for Flaco AI
+
+This file provides context to Flaco about your project's conventions, architecture, and guidelines.
+
+## Project Overview
+
+Brief description of what this project does and its main goals.
+
+## Code Style & Conventions
+
+### Language-Specific Guidelines
+- List your language-specific conventions
+- Naming conventions (camelCase, snake_case, etc.)
+- File organization patterns
+- Import/export patterns
+
+### Formatting
+- Indentation (spaces/tabs, size)
+- Line length limits
+- Formatting tool (Prettier, Black, etc.)
+
+### Linting
+- Linter configuration
+- Required lint rules
+- Exceptions or overrides
+
+## Architecture
+
+### Project Structure
+```
+your-project/
+├── src/
+│   ├── components/
+│   ├── services/
+│   ├── utils/
+│   └── types/
+├── tests/
+└── docs/
+```
+
+### Design Patterns
+- Patterns used in the project
+- Architectural principles followed
+- Dependency management approach
+
+### Key Components
+- Description of main modules
+- Component responsibilities
+- Inter-component communication
+
+## Testing
+
+### Testing Strategy
+- Unit tests: Framework and conventions
+- Integration tests: Approach and tools
+- E2E tests: Setup and requirements
+
+### Coverage Requirements
+- Minimum code coverage percentage
+- Critical paths that must be tested
+- Mocking/stubbing conventions
+
+### Running Tests
+```bash
+# Command to run tests
+npm test
+# or
+pytest
+```
+
+## Git Workflow
+
+### Branch Naming
+- `feature/` - New features
+- `bugfix/` - Bug fixes
+- `hotfix/` - Critical production fixes
+- `refactor/` - Code refactoring
+
+### Commit Messages
+Follow conventional commits:
+- `feat:` - New features
+- `fix:` - Bug fixes
+- `docs:` - Documentation changes
+- `style:` - Code style changes
+- `refactor:` - Code refactoring
+- `test:` - Test additions/changes
+- `chore:` - Build/tooling changes
+
+### Pull Request Process
+- Requirements before PR submission
+- Review process
+- Merge strategy (squash, merge, rebase)
+
+## Documentation
+
+### Code Documentation
+- When to add comments
+- Documentation format (JSDoc, docstrings, etc.)
+- Required documentation for public APIs
+
+### README Updates
+- When to update README
+- Required sections
+
+## Environment & Setup
+
+### Prerequisites
+- Required software and versions
+- Environment variables needed
+- External services/dependencies
+
+### Development Setup
+```bash
+# Setup commands
+npm install
+# or
+pip install -r requirements.txt
+```
+
+### Build Process
+```bash
+# Build commands
+npm run build
+# or
+python setup.py build
+```
+
+## Common Commands
+
+```bash
+# Development server
+npm run dev
+
+# Run tests
+npm test
+
+# Run linter
+npm run lint
+
+# Format code
+npm run format
+
+# Build for production
+npm run build
+```
+
+## Security Considerations
+
+- Authentication/authorization approach
+- Secrets management
+- Security scan tools used
+- Known security requirements
+
+## Performance Guidelines
+
+- Performance benchmarks
+- Optimization priorities
+- Caching strategies
+- Database query guidelines
+
+## Dependencies
+
+### Core Dependencies
+- List of main dependencies and their purpose
+- Version constraints
+- Upgrade policy
+
+### Development Dependencies
+- Development tools
+- Testing frameworks
+- Build tools
+
+## Areas of Concern
+
+### Known Issues
+- Technical debt areas
+- Legacy code that needs refactoring
+- Performance bottlenecks
+
+### Deprecated Patterns
+- Patterns being phased out
+- Migration strategies
+- Timeline for changes
+
+## Contact & Resources
+
+- Team communication channels
+- Documentation links
+- Related repositories
+- Design resources
+
+## Flaco-Specific Instructions
+
+### Preferred Approaches
+- How Flaco should handle certain tasks
+- Preferred libraries or patterns
+- Code generation preferences
+
+### Restricted Operations
+- Files that should rarely be modified
+- Commands that require extra caution
+- Areas requiring manual review
+
+---
+
+**Note**: Keep this file updated as the project evolves. Flaco will use this context to provide better, project-specific assistance.

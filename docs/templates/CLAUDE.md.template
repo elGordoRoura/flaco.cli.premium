@@ -1,0 +1,30 @@
+# CLAUDE.md
+
+This file provides guidance to Claude (and other agents) when working in this repository.
+
+## Project Overview
+- App: Flaco AI (CLI + macOS desktop)
+- Focus: Local-first AI coding assistant powered by Ollama
+- Tech Stack: Python CLI (`flaco/`), Electron UI (`flaco-macos/`)
+
+## Development Commands
+
+### CLI
+- Install: `python -m venv venv && source venv/bin/activate && pip install -e .`
+- Run: `flaco` or `python -m flaco.cli --help`
+- Tests: `pytest`
+
+### Desktop
+- Install: `cd flaco-macos && npm install`
+- Run: `npm start`
+- Tests: `npm test`
+- Build: `npm run build:quiet` (CI-safe)
+
+## Conventions
+- Python: PEP 8, 4-space indent, type hints where useful; prefer `logging` over prints.
+- JavaScript: CommonJS modules, camelCase, renderer-safe code lives in `preload.js`.
+- Docs: Customer-facing guides in `docs/guides/`; internal/owner docs in `docs/internal/`.
+
+## Context Files
+- `FLACO.md` (optional) for project-specific context.
+- `CLAUDE.md` (this file) for repo-wide guidance.

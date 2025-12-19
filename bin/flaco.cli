@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Flaco CLI global wrapper
+# Auto-activates venv and runs the CLI
+
+FLACO_DIR="/Users/roura.io/flaco.ai"
+VENV_PATH="$FLACO_DIR/venv"
+
+# Check if venv exists
+if [ ! -d "$VENV_PATH" ]; then
+    echo "❌ Flaco venv not found at $VENV_PATH"
+    echo "Please run: cd $FLACO_DIR && python3 -m venv venv && pip install -e ."
+    exit 1
+fi
+
+# Activate venv and run flaco
+source "$VENV_PATH/bin/activate"
+exec python3 -m flaco.cli "$@"

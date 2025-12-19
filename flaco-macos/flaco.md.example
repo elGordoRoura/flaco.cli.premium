@@ -1,0 +1,69 @@
+# Flaco Context File
+
+This file provides persistent context to your Flaco AI agents across all conversations. Place a `flaco.md` file in your project directory to give your agents long-term memory about your project.
+
+## What is this?
+
+`flaco.md` is automatically loaded at the start of every conversation and included in the AI's system prompt. Think of it as your project's long-lived memory that survives context refreshes and new sessions.
+
+## Example Usage
+
+### Project Information
+```markdown
+# My Awesome Project
+
+This is a Node.js web application built with Express and React.
+
+## Key Files
+- `/src/server.js` - Express server
+- `/src/client/App.jsx` - React main component
+- `/config/database.js` - MongoDB configuration
+
+## Coding Standards
+- Use async/await instead of promises
+- Prefer functional components with hooks
+- Keep functions under 50 lines
+- Write tests for all API endpoints
+
+## Common Tasks
+- `npm run dev` - Start development server
+- `npm test` - Run test suite
+- `npm run build` - Build for production
+```
+
+### Personal Preferences
+```markdown
+## My Preferences
+- I prefer TypeScript over JavaScript when adding new files
+- Always add JSDoc comments to exported functions
+- Use single quotes for strings
+- Indent with 2 spaces
+```
+
+### Project Context
+```markdown
+## Current Work
+Working on implementing user authentication with JWT.
+- Added login endpoint in `routes/auth.js`
+- Need to add password hashing with bcrypt
+- Need to implement token refresh logic
+
+## Known Issues
+- Payment API sometimes times out (investigating)
+- Dark mode toggle doesn't persist on reload
+```
+
+## Tips
+
+1. **Be Specific**: The more specific your context, the better responses you'll get
+2. **Keep It Updated**: Update this file as your project evolves
+3. **Use Markdown**: Structure your context with headings and lists
+4. **Include Examples**: Show your agents code examples of your preferred style
+
+## Location
+
+Place `flaco.md` in your project's root directory where you're working. Flaco will automatically detect and load it.
+
+---
+
+**Note:** Delete this file and create your own `flaco.md` with your project's context!

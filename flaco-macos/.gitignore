@@ -1,0 +1,31 @@
+# Build output
+dist/
+*.dmg
+*.zip
+*.blockmap
+
+# Node modules
+node_modules/
+
+# Test data
+user-data/
+test-data/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Env files
+.env
+.env.local
+
+# Electron
+out/

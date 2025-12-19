@@ -1,0 +1,5 @@
+"""Configuration management for Flaco"""
+
+from .user_config import UserConfig
+
+__all__ = ['UserConfig']
