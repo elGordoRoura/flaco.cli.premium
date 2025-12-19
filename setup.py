@@ -40,8 +40,8 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "flaco-premium=flaco.cli:main",
-            "flacopro=flaco.cli:main",  # Short alias
+            "flaco.premium=flaco.cli:main",
+            "flaco.pro=flaco.cli:main",  # Short alias
         ],
     },
 )

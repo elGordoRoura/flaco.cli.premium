@@ -638,7 +638,7 @@ Complete rewrite and reorganization of Flaco with professional structure and mod
   - Multiline input support (press Enter twice to submit)
   - Large paste detection (>15 lines) with preview
   - Clean Claude-style interface
-  - Global command access via flaco.cli
+  - Global command access via `flaco.premium` and `flaco.pro` (short alias)
 
 #### Branding
 - ⚡ Lightning bolt icon (replacing llama)
